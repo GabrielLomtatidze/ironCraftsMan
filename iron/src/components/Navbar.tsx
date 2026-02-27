@@ -3,20 +3,20 @@ import { useState, useEffect } from "react";
 const navLinks = [
   { label: "კარებები", href: "#doors" },
   { label: "ჭიშკრები", href: "#gates" },
-  { label: "კიბეები", href: "#letters" },
+  { label: "კიბეები", href: "#stairs" },
   { label: "საკონტაცტო", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      const sections = ["hero", "doors", "gates", "letters", "contact"];
+      const sections = ["doors", "gates", "stairs", "contact"];
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
         if (el) {
@@ -76,7 +76,7 @@ export default function Navbar() {
             className="text-xl font-bold text-[#F5F5F5] tracking-wider"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
-            რკინის<span className="text-[#C45A2D]"> ხელობა</span>
+            რკინის<span className="text-[#C45A2D]"> ხელოსანი</span>
           </span>
         </a>
 

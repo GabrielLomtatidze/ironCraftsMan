@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import DoorsSection from "../components/DoorsSection";
 import GatesSection from "../components/GatesSection";
-import LettersSection from "../components/LettersSection";
+import StairsSection from "../components/StairsSection";
 import Footer from "../components/Footer";
 
 export default function Index() {
@@ -10,7 +10,7 @@ export default function Index() {
       <Navbar />
       <DoorsSection />
       <GatesSection />
-      <LettersSection />
+      <StairsSection />
       <Footer />
     </div>
   );
