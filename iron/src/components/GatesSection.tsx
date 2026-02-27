@@ -2,18 +2,18 @@ import ProductCard from "./ProductCard";
 
 const gates = [
   {
-    title: "Grand Estate Gate",
+    title: "",
     description:
-      "Majestic double driveway gate with intricate scrollwork and symmetrical design. Makes a powerful first impression.",
+      "",
     images: [
       "../../public/gates/gate_1.jpeg",
       "../../public/gates/gate_2.jpeg",
     ],
   },
   {
-    title: "Grand Estate Gate",
+    title: "",
     description:
-      "Majestic double driveway gate with intricate scrollwork and symmetrical design. Makes a powerful first impression.",
+      "",
     images: [
       "../../public/gates/gate_3.jpeg",
       "../../public/gates/gate_4.jpeg",
@@ -22,9 +22,9 @@ const gates = [
     ],
   },
   {
-    title: "Grand Estate Gate",
+    title: "",
     description:
-      "Majestic double driveway gate with intricate scrollwork and symmetrical design. Makes a powerful first impression.",
+      "",
     images: [
       "../../public/gates/gate_10.jpeg",
       "../../public/gates/gate_9.jpeg",
