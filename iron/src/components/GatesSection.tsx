@@ -17,8 +17,8 @@ const gates = [
     images: [
       "../../public/gates/gate_3.jpeg",
       "../../public/gates/gate_4.jpeg",
-      ".../../public/gates/gate_5.jpeg",
-      ".../../public/gates/gate_6.jpeg",
+      "../../public/gates/gate_5.jpeg",
+      "../../public/gates/gate_6.jpeg",
     ],
   },
   {
@@ -26,8 +26,8 @@ const gates = [
     description:
       "Majestic double driveway gate with intricate scrollwork and symmetrical design. Makes a powerful first impression.",
     images: [
-      ".../../public/gates/gate_10.jpeg",
-      ".../../public/gates/gate_9.jpeg",
+      "../../public/gates/gate_10.jpeg",
+      "../../public/gates/gate_9.jpeg",
       "../../public/gates/gate_7.jpeg",
       "../../public/gates/gate_8.jpeg",
     ],
