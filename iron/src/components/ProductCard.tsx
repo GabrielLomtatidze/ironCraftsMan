@@ -6,7 +6,7 @@ interface ProductCardProps {
   images: string[];
 }
 
-export default function ProductCard({ title, description, images }: ProductCardProps) {
+export default function ProductCard({ title, images }: ProductCardProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goTo = (index: number) => {
