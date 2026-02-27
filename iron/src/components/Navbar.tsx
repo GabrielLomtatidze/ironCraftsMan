@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "Doors", href: "#doors" },
-  { label: "Gates", href: "#gates" },
-  { label: "Letters", href: "#letters" },
-  { label: "Contact", href: "#contact" },
+  { label: "კარებები", href: "#doors" },
+  { label: "ჭიშკრები", href: "#gates" },
+  { label: "კიბეები", href: "#letters" },
+  { label: "საკონტაცტო", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -77,7 +76,7 @@ export default function Navbar() {
             className="text-xl font-bold text-[#F5F5F5] tracking-wider"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
-            IRON<span className="text-[#C45A2D]">CRAFT</span>
+            რკინის<span className="text-[#C45A2D]"> ხელობა</span>
           </span>
         </a>
 

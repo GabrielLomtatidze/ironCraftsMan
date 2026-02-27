@@ -82,7 +82,7 @@ export default function ProductCard({ title, description, images }: ProductCardP
       </div>
 
       {/* Info */}
-      <div className="p-5">
+      {/* <div className="p-5">
         <h3
           className="text-xl font-bold text-[#F5F5F5] mb-2 group-hover:text-[#C45A2D] transition-colors duration-300"
           style={{ fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "0.05em" }}
@@ -95,7 +95,7 @@ export default function ProductCard({ title, description, images }: ProductCardP
         >
           {description}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
