@@ -1,4 +1,16 @@
 import ProductCard from "./ProductCard";
+import image_1 from "@/images/stairs/stair_1.jpeg"
+import image_2 from "@/images/stairs/stair_2.jpeg"
+import image_3 from "@/images/stairs/stair_3.jpeg"
+import image_4 from "@/images/stairs/stair_4.jpeg"
+import image_5 from "@/images/stairs/stair_5.jpeg"
+import image_6 from "@/images/stairs/stair_6.jpeg"
+import image_7 from "@/images/stairs/stair_7.jpeg"
+import image_8 from "@/images/stairs/stair_8.jpeg"
+import image_9 from "@/images/stairs/stair_9.jpeg"
+import image_10 from "@/images/stairs/stair_10.jpeg"
+import image_11 from "@/images/stairs/stair_11.jpeg"
+import image_12 from "@/images/stairs/stair_12.jpeg"
 
 const gates = [
   {
@@ -6,10 +18,10 @@ const gates = [
     description:
       "",
     images: [
-      "../../public/stairs/stair_1.jpeg",
-      "../../public/stairs/stair_2.jpeg",
-      "../../public/stairs/stair_3.jpeg",
-      "../../public/stairs/stair_4.jpeg",
+      image_1,
+      image_2,
+      image_3,
+      image_4,
     ],
   },
   {
@@ -17,10 +29,10 @@ const gates = [
     description:
       "",
     images: [
-     "../../public/stairs/stair_5.jpeg",
-      "../../public/stairs/stair_6.jpeg",
-      "../../public/stairs/stair_7.jpeg",
-      "../../public/stairs/stair_8.jpeg",
+      image_5,
+      image_6,
+      image_7,
+      image_8,
     ],
   },
   {
@@ -28,10 +40,10 @@ const gates = [
     description:
       "",
     images: [
-      "../../public/stairs/stair_9.jpeg",
-      "../../public/stairs/stair_10.jpeg",
-      "../../public/stairs/stair_11.jpeg",
-      "../../public/stairs/stair_12.jpeg",
+      image_9,
+      image_10,
+      image_11,
+      image_12,
     ],
   },
 

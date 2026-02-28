@@ -1,4 +1,14 @@
 import ProductCard from "./ProductCard";
+import image_1 from "@/images/gates/gate_1.jpeg"
+import image_2 from "@/images/gates/gate_2.jpeg"
+import image_3 from "@/images/gates/gate_3.jpeg"
+import image_4 from "@/images/gates/gate_4.jpeg"
+import image_5 from "@/images/gates/gate_5.jpeg"
+import image_6 from "@/images/gates/gate_6.jpeg"
+import image_7 from "@/images/gates/gate_7.jpeg"
+import image_8 from "@/images/gates/gate_8.jpeg"
+import image_9 from "@/images/gates/gate_9.jpeg"
+import image_10 from "@/images/gates/gate_10.jpeg"
 
 const gates = [
   {
@@ -6,8 +16,8 @@ const gates = [
     description:
       "",
     images: [
-      "../../public/gates/gate_1.jpeg",
-      "../../public/gates/gate_2.jpeg",
+      image_1,
+      image_2,
     ],
   },
   {
@@ -15,10 +25,10 @@ const gates = [
     description:
       "",
     images: [
-      "../../public/gates/gate_3.jpeg",
-      "../../public/gates/gate_4.jpeg",
-      "../../public/gates/gate_5.jpeg",
-      "../../public/gates/gate_6.jpeg",
+      image_3,
+      image_4,
+      image_5,
+      image_6,
     ],
   },
   {
@@ -26,10 +36,10 @@ const gates = [
     description:
       "",
     images: [
-      "../../public/gates/gate_10.jpeg",
-      "../../public/gates/gate_9.jpeg",
-      "../../public/gates/gate_7.jpeg",
-      "../../public/gates/gate_8.jpeg",
+      image_10,
+      image_9,
+      image_7,
+      image_8,
     ],
   },
 

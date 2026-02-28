@@ -1,4 +1,12 @@
 import ProductCard from "./ProductCard";
+import image_1 from "@/images/doors/door_1.jpeg"
+import image_2 from "@/images/doors/door_2.jpeg"
+import image_3 from "@/images/doors/door_3.jpeg"
+import image_4 from "@/images/doors/door_4.jpeg"
+import image_5 from "@/images/doors/door_5.jpeg"
+import image_6 from "@/images/doors/door_6.jpeg"
+import image_7 from "@/images/doors/door_7.jpeg"
+
 
 const doors = [
   {
@@ -6,9 +14,9 @@ const doors = [
     description:
       "",
     images: [
-      "../../public/doors/door_1.jpeg",
-      "../../public/doors/door_2.jpeg",
-      "../../public/doors/door_3.jpeg",
+      image_1,
+      image_2,
+      image_3,
     ],
   },
   {
@@ -16,8 +24,8 @@ const doors = [
     description:
       "",
     images: [
-      "../../public/doors/door_4.jpeg",
-      "../../public/doors/door_5.jpeg",
+      image_4,
+      image_5,
     ],
   },
   {
@@ -25,8 +33,8 @@ const doors = [
     description:
       "",
     images: [
-      "../../public/doors/door_6.jpeg",
-      "../../public/doors/door_7.jpeg",
+      image_6,
+      image_7,
     ],
   }
 ];
