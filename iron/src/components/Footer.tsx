@@ -26,7 +26,7 @@ export default function Footer() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a
-              href="tel:+1234567890"
+              href="tel:+995 591 11 33 64"
               className="group flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#C45A2D] to-[#A04420] text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-[#C45A2D]/25 transition-all duration-300 hover:-translate-y-0.5"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
