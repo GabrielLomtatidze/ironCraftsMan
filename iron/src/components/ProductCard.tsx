@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 interface ProductCardProps {
   title: string;
@@ -9,22 +9,55 @@ interface ProductCardProps {
 export default function ProductCard({ title, images }: ProductCardProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const minSwipeDistance = 50;
+
   const goTo = (index: number) => {
     setCurrentIndex(index);
   };
 
   const goPrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setCurrentIndex((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
+    );
   };
 
   const goNext = () => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) =>
+      prev === images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchEndX.current = null;
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchEnd = () => {
+    if (touchStartX.current === null || touchEndX.current === null) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+
+    if (distance > minSwipeDistance) {
+      goNext();
+    } else if (distance < -minSwipeDistance) {
+      goPrev();
+    }
   };
 
   return (
     <div className="group bg-[#1A1A1A] rounded-2xl border border-[#2A2A2A] overflow-hidden hover:border-[#C45A2D]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C45A2D]/10">
-      {/* Image Carousel */}
-      <div className="relative aspect-[4/5] overflow-hidden">
+      <div
+        className="relative aspect-[4/5] overflow-hidden cursor-grab active:cursor-grabbing"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
         {images.map((img, idx) => (
           <img
             key={idx}
@@ -36,30 +69,48 @@ export default function ProductCard({ title, images }: ProductCardProps) {
           />
         ))}
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-transparent to-transparent opacity-60 pointer-events-none" />
 
-        {/* Arrow buttons */}
         <button
           onClick={goPrev}
           className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#0C0C0C]/70 backdrop-blur-sm border border-[#2A2A2A] text-[#F5F5F5] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#C45A2D]/80 hover:border-[#C45A2D]"
           aria-label="Previous image"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
           </svg>
         </button>
+
         <button
           onClick={goNext}
           className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#0C0C0C]/70 backdrop-blur-sm border border-[#2A2A2A] text-[#F5F5F5] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#C45A2D]/80 hover:border-[#C45A2D]"
           aria-label="Next image"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
           </svg>
         </button>
 
-        {/* Dot indicators */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2">
           {images.map((_, idx) => (
             <button
@@ -75,7 +126,6 @@ export default function ProductCard({ title, images }: ProductCardProps) {
           ))}
         </div>
 
-        {/* Image counter */}
         <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#0C0C0C]/60 backdrop-blur-sm border border-[#2A2A2A] text-[#9A9A9A] text-xs font-medium">
           {currentIndex + 1} / {images.length}
         </div>
